@@ -1,0 +1,206 @@
+@font-face {
+  font-family: Roboto;
+  src:
+    url("./fonts/Roboto-Regular.ttf"),
+    url("./fonts/Roboto-Italic.ttf"),
+    url("./fonts/Roboto-Bold.ttf"),
+    url("./fonts/Roboto-BoldItalic.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: white;
+  border-radius: 8px;
+  border: none;
+  width: 40vw;
+  margin: 0;
+  padding: 0;
+  box-shadow:
+    15px 15px 20px rgb(0 0 0 / 50%),
+    -15px 15px 20px rgb(0 0 0 / 50%);
+}
+
+.title {
+  padding: 2px 4px;
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 1rem; */
+  padding-left: 2rem;
+  border-bottom: solid 1px darkgrey;
+  height: auto;
+}
+
+.fa-trash-alt,
+.fa-refresh {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.fa-trash-alt:hover,
+.fa-refresh:hover {
+  transform: rotate(90deg);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-bottom: #a1a1a1;
+}
+
+.add-todo {
+  font-style: italic;
+  border: none;
+  width: 240px;
+}
+
+.add-todo:focus {
+  background: #f5f5f5;
+  font-style: normal;
+  color: black;
+}
+
+.todo-el {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2px 4px;
+  border-bottom: solid 1px darkgrey;
+}
+
+.checkbox:checked + .todo-el {
+  text-decoration: line-through;
+}
+
+.todo-el.completed {
+  text-decoration: line-through;
+  text-decoration-color: #3b3939;
+  color: #f6f6f6;
+  font-style: italic;
+}
+
+.checkbox {
+  padding: 2px;
+  margin: 1px;
+}
+
+.checkbox:focus {
+  outline: solid 1px black;
+}
+
+label {
+  color: #3b3939;
+  font-size: 0.7em;
+  margin-left: 1em;
+}
+
+label:checked {
+  color: #a5a5a5;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.positioner {
+  padding: 2px;
+  cursor: crosshair;
+  background-color: white;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clear-btn {
+  background-color: #d7d6d6;
+  color: #a1a1a1;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding-block: 5px;
+  border-radius: 0 0 8px 8px;
+}
+
+.clear-btn:active {
+  transform: scale(0.98);
+  width: 100%;
+}
+
+.return-icon {
+  margin-bottom: 5px;
+  margin-right: 0.6rem;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #c3c3c3;
+  cursor: pointer;
+}
+
+.return-icon:focus {
+  outline: none;
+  color: #333;
+  transform: scale(1.1);
+  transition: 0.5s  ease-in-out;
+}
+
+.income-input {
+  width: 100%;
+  padding: 0;
+  margin-top: 5px;
+  border-bottom: solid 1px darkgrey;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.income-input:focus-within,
+.income-input:active {
+  background: #f5f5f5;
+  font-style: normal;
+}
